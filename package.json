@@ -1,7 +1,16 @@
 {
-  "dependencies": {
-    "express": "^4.17.1",
-    "express-graphql": "^0.9.0",
-    "graphql": "^14.4.2"
-  }
+    "dependencies": {
+        "bcrypt": "^3.0.6",
+        "cors": "^2.8.5",
+        "cross-env": "^5.2.0",
+        "express": "^4.17.1",
+        "express-graphql": "^0.9.0",
+        "graphql": "^14.4.2",
+        "jsonwebtoken": "^8.5.1",
+        "nodemon": "^1.19.1"
+    },
+    "scripts": {
+        "dev": "cross-env NODE_ENV=dev nodemon --watch index.js --watch resolvers --watch db_api.js",
+        "prod": "cross-env NODE_ENV=prod node build/index.js"
+    }
 }
