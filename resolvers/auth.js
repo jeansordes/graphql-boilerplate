@@ -1,7 +1,7 @@
 const bcrypt = require("bcrypt"),
     jwt = require("jsonwebtoken"),
-    db = require("../db_api"),
-    fs = require("fs");
+    fs = require("fs"),
+    db = require("../src/json-db");
 
 module.exports = {
     signup: ({ username, password }) => {

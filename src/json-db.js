@@ -1,6 +1,6 @@
 const
     fs = require("fs"),
-    db_path = "./data/db_data.json";
+    db_path = "./data/db-data.json";
 
 const
     pull = () => {
@@ -9,9 +9,9 @@ const
 
             return {
                 userTable: [
-                    { uid: 1, username: "root", password_hash: "$2y$10$Z5BrpS9WnD0umIXnsVXlR.8wHzZco.jgxvumbS7yaxKJ3r08YDoJy" }
+                    { uid: 1, username: "root", password_hash: "" }
                 ]
-            }; // only user is root, its password is root
+            };
 
         }
         return JSON.parse(fs.readFileSync(db_path, { encoding: "utf8" }));
